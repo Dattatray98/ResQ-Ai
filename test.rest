@@ -1,0 +1,7 @@
+POST http://localhost:8000/api/user/createuser
+
+{
+    "name":"dattu",
+    "email":"dattu@gmail.com",
+    "password":"dattu@123"
+}

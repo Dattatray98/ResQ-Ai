@@ -1,7 +1,7 @@
 import express, { Request, Response} from "express";
 import { MongoDatabase } from "./Config/MongoDB.config";
 import User from "./Routes/User.route"
-
+import Weather from "./Routes/Weather.route";
 const app = express();
 const PORT = process.env.PORT || 8000;
 
@@ -15,6 +15,7 @@ app.get('/', (req: Request, res: Response)=>{
 
 
 app.use("/api/user", User);
+app.use("/api", Weather);
 
 app.listen(PORT, ()=>{
     console.log(`Server is running on port http://localhost:${PORT}`);
